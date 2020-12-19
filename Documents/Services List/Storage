@@ -1,0 +1,25 @@
+Storage-
+
+
+
+S3 - Simple Storage Service
+Basit depolama servisidir.Çok basit bir obje tabanlı depolama servisidir. 0kb-5tb a kadar dosya tutabilirsiniz.5 TB tek bir dosyanın maks büyüklüğüdür.
+S3 limitsizdir.İstediğiniz kadar dosya koyabilirsiniz.
+S3 depolama birimlerine Bucket-Kova denir.
+Obje ve Metadata
+Metadata,veri hakkında veri demektir.Örneğin objenin yaratılma tarihi Date,boyutu Content-Length değişkenleri o objeyle birlikte tutulan metadatalardır.
+
+https://fatihktest.s3-eu-west-1.amazonaws.com/12.jpg
+
+EFS - Elastic File System
+Birden fazla sanal makinaya bağlayabiliceğin ve aynı anda birden fazla makinanın erişip okuma yazma yapabiliceği bir nevi esnek bir haddisktir.EFS’de bir dosya sistemi yaratıyorsunuz ve bunu makinandaki bir klasöre veya bir noktaya bağlıyorsunuz.Sonrasında buna erişip içerisine dosya koyabiliyoruz.NFS tabanlı bir dosya deposudur.
+
+Amazon Glacier
+Kullandığımız uzun vadeli saklamam gereken ve acil ve hızlı erişmem gerekmeyen verilerimi glacier servisinde saklayabiliyoruz.
+
+
+AWS Storage Gateway
+Karma bir depolama hizmetidir.
+
+Elastic Block Storage – EBS
+AWS dünyasında EC2 sanal makinalarında kullanabiliceğimiz diskler oluşturup yönettiğimiz servisin adıdır. EDS (Volume and Snapshots) EBS’de sanal diskler oluşturup bunları makinalara bağlıyoruz.Blok tabanlı bir disk deposudur.

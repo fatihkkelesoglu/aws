@@ -1,0 +1,72 @@
+Analytics -
+
+
+
+Athena
+
+SQL dilini kullanarak S3 içindeki verilerimizi sorgulayıp analiz edebiliyoruz.
+
+
+EMR - Elastic MapReduce
+
+Hadutun aws deki manage servis halidir.
+
+
+
+Amazon CloudSearch
+
+
+
+
+
+
+Elasticsearch Service
+
+Log analiz ve arama servisidir diyebiliriz.Elasticsearch aws de kullanıyoruz diyebiliriz.
+
+
+Kinesis
+
+Akan datanın anında analiz ederek çözüme kavuşturulması konusunda yardımcı olur.
+Kinesis gerçek zamanlı veri toplama ve dağıtma sistemidir.
+
+
+
+
+Amazon QuickSight
+
+İş zekası servisidir.Business Intelligent servisi.
+
+
+DataPipeline
+
+Büyük bir datayı bir aws servisinden bir aws servisine taşımak isterseniz ve kullanırken üzerinde değişiklik yapmak isterseniz bu servisi kullanıyoruz.
+
+
+Glue
+
+Bir veri tabanından verileri çekip bunları analiz edip başka veri tabanlarına yazmak için kullandığımız servistir.
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
+Customer Engagement
+
+
+
+SES - Simple Email Service
+
+Kampanya emailleri göndermek için kullanılan bir servistir diyebiliriz.E-posta gönderim servisidir.
+Kısacası bizim daha önceden hazırladığımız template leri kullanarak yüzlerce binlerce mail atabilmemizi sağlayan email gönderme servisidir.
+
+
+Connect
+
+Bir nevi call center oluşturmayı sağlıyor.
+
+
+
+PinPoint
+
+Mobil uygulamalarınızın kullanımlarını analiz etmenizi ve kampanya yaratmanızı sağlıyor.

@@ -1,0 +1,94 @@
+Management  Tools-
+
+
+
+CloudWatch
+
+AWS üzerinde mönitöring izleme işlemleri sağlıyor.AWS dünyasının mönitörüng servisidir.
+CloudWatch birçok AWS servisi ile ilgili izleme tanımı yapılabilicek birçok metrikse sahiptir.Örneğin ;
+EC2 sanal makinalarınızın cpu kullanımını izleyebilirsiniz.
+S3 Bucketlarınızın boyutunu ve içerisinde kaçtane obje olduğunu görebilirsiniz.
+Görsel ekranlar yaratıp oluşturduğumuz görevleri görmek için dashboardlar oluştururuz.
+Aynı şekilde DashBoard larla alakalı kullanım uyarı alarmları yaratabiliriz.
+Eventlar olarak servis üzerinde herhangi bir olay olursa o olayla ilgili bana bir işlem yapabilme işlemi sağlıyor yani Alarmdan gibi sadece uyarı veriyim şeklinde çalışmıyor istersek işlemlerde yapabiliyoruz.
+Hızlıca bir veya birden fazla mektriksi tek kullanım için ekranda görmek istersek Metrics kısmından bakabiliriz.Dashboard oluşturmamıza gereken kalmadan bize hızlı inceleme şansı sunar.
+Not : AWS üzerinde memory bilgisini direk CloudWatch servisi üzerinde görebilme şansımız yok bunun bir yöntemi var ama varsayılan olarak bunu göremiyoruz.
+Varsayılan olarak her metrics listede olucak diye bir şey yok,siz isterseniz özel olarak metricslerinizi farklı yöntemlerle alıp cloudwatche gönderebilir ve kullanabilirsiniz.
+Logslarımızı incelemek içinde aynı şekilde CloudWatch Logs özelliğini kullanabiliriz.
+
+
+
+
+
+
+
+
+
+
+
+
+CloudTrail
+
+Bizim AWS üzerinde neler yaptığımızı aws kaynaklarıyla ne yaptığımızın kaydını tutup bize gösteren servistir.Cloudtrail  AWS dünyasının kayıt defteridir.Sizin hesabınızın içerisinde yapılan her işlemin hangi kullanıcı tarafından hangi tarihte hangi ip üzerinden yapıldığının kaydını tutar.Cloudtrail bu API çağrılarının kaydını tutar.
+AWS hesabımızın yönetim,uyumluluk ve operasyonel risk denetimini sağlar.
+CloudTrail servisine gittiğinizde event history kısmını görebilirsiniz,event history kısmında yapılan işlemlerin kaydı 90 güne kadar tutulur yani varsayılan olarak bu şekildedir.Ancak biz istersek Trail kısmından özel olarak trailler oluşturup farklı süreler ekleyebiliriz.Biz eğer 90 günün üzerinde bir ihtiyacımız varsa bu şekilde trail yaratarak ve bunların üzerinde daha sonra çeşitli sorgular yapabilicek şekilde saklayabiliyoruz.
+
+
+
+
+CloudFormation
+
+Tüm ihtiyacımız olan kaynakları bir dosya halinde kaydediyoruz ve çalıştırıyoruz.Bu sayede CloudFormation arka tarafta ihtiyacımız olan tüm AWS hizmetlerini devreye alıyor.CloudFormation senin kurmak istediğin altyapıyı adım adım kurulum aşamaları ve kurmak istediğin servisler şeklinde yazabiliceğin bir template dosyası yaratmana imkan sağlıyor.Daha sonrasında bu template dosyasında belirlediğin servisleri tek bir tıklama ile senin adına kuruyor.Aynı şekilde delete stack dersen tüm servisler aynı anda kaldırılıyor ayrıca stack üzerinden update işlemi de yapılabiliyor.
+CloudFormation 2 temel komponentten oluşur.Bunlar ; Template ve Stack 
+CloudFormation Template Bölümleri ; 
+Version,Description,MetaData,Parameters,Mappings,Conditions,Outputs,Resources
+
+
+
+
+
+Autoscaling
+
+Sunucularla alakalı cpu artmasında otomatik servis kapatıp başka servise aktarma gibi işlemler sağlayan automatize servisidir.
+
+
+
+AWS Config
+
+Sisteminizin bir nevi mevcut resmini çekiyorsunuz ve gerekli configürasyonlarınızı görebiliyorsunuz.
+Aynı şekilde sistemde detaylı bir inceleme yapabiliyoruz,tarihe göre instance ların geçmişlerine dönüp yapılan işlemleri görebiliyoruz ve bu şekilde sistemdeki hatalara önlem alabiliyoruz.Detaylı bir bir takip,inceleme ve configürasyon servisidir.
+
+
+AWS OpsWorks
+
+Altyapınızın kurulumu,yönetimi ve istediğiniz seviyede kalmasını otomatize etmenizi sağlıyor.Bir nevi AWS nin Chef,Puppet ı diyebiliriz.
+Sunucu konfigürasyonu birçok adımdan oluşan zahmetli bir iştir.Manuel işler yapılması hataya zemin hazırlar.Aynı işin tekrar tekrar yapılması zaman kaybı yaratır.Bu yüzden configuration management araçlarına ihtiyaç duyuldu.AWS de bu işi OpsWorks yapıyor diyebiliriz.
+Configuration Management araçları bize 3 temel kolaylık sağlar ;
+Manuel işleri otomatize eder.
+Altyapı yönetimini code haline getirir. (Insfracture as Code).
+Sistemi belirlenen durumda tutar.
+
+
+Service Catalog
+
+Eğer şirket çalışanlarım aws üzerinde çalışsınlar ama sadece benim istediğim servislere ulaşsın gibi birşey istiyorsanız onu bu servisle yapıyorsunuz.
+
+
+
+Systems Manager
+
+
+Birçok sunucuzu biraraya toplayıp tek bir ekrandan hepsine birden işletim sistemi güncellemesi geçmek gibi işlemleri bu servisle halledebiliyoruz.
+
+
+
+Trusted Advisor
+
+AWS nin tavsiye edilen alışkanlıklarını takip ederek kaynaklarınızı oluşturmakta yardımcı olacak gerçek zamanlı rehberlik sağlar.
+
+
+
+
+Managed Services
+
+Altyapı yönetimini autosource etmen için kullanabiliceğin güvenli partnerlere bu servis üzerinden ulaşabilirsiniz.

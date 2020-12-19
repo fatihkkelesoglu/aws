@@ -1,0 +1,42 @@
+Compute-
+
+
+
+EC2  (Elastic Compute Cloud)
+Sanal makina yaratmamıza ve kullanmamıza imkan sağlar.Binlerce fiziksel sunucu üzerinde koşan sanal makineler diyebiliriz.Elastic Load Balancer,AutoScaling gibi alt servisleri ve Placement group gibi hizmetleri vardır.EC2 servisi sayesinde AWS dünyasında sanal makinalar oluşturup,yönetebilirsiniz.
+
+
+Lightsail 
+Bir özel sanal sunucuya sahip olmanın ve yönetmenin en kolay yoludur.
+
+
+
+
+
+ECS - Elastic Container Service
+Docker containerlarını production ortamında yönetmemizi sağlayan ECS servisidir.Bir nevi AWS’nin Docker Swarm veya Kubernetes gibi çalışan orchestration yapmamızı sağlayan servistir diyebiliriz.ECS de altyapı olarak EC2 Mode ve Fargate bulunur.ECS bir orchestration servisidir ve yönetilen bir servistir yani bunu gibi arka tarafta bir sunucuya kurmanız gerekmez.Isterseniz EC2 servisinden binlerce sanal makinalar oluşturup bunları Docker Swarm veya Kubernetes gibi araçlarla yönetirsiniz veya AWS nin hizmetini kullanırız. 
+
+
+EKS - Elastic Kubernetes Service
+ECS servisine çok benzer ancak sadece Kubernetes orchestration için kullanılır ve Kubernetes engine ihtiyaç duyar.
+
+ECR – Elastic Container Registery
+Bir bakıma AWS’nin Dockerhub ortamı diyebiliriz.Docker imagelerimizi tutup,saklayıp ve yönetebiliceğimiz bir Docker registery’sidir.ECR servisi aynı şekilde ECS ile entegre çalışarak işlerimizi kolaylaştırır.
+
+KMS – Key Management Service
+AWS Anahtar Yönetimi ve Hizmeti (KMS), çeşitli AWS servisleri ve uygulamalarınızda anahtar oluşturmanızı, yönetmenizi ve şifreleme kullanımını kontrol etmenizi kolaylaştırır.
+AWS KMS, düzenleme ve uyumluluk gereksinimlerinizi karşılamanıza yardımcı olmak için tüm anahtar kullanım günlüklerini size sunmak için AWS CloudTrail ile entegre edilmiştir.
+
+AWS Lambda
+Sunucu yönetme zahmetine girmeden kod çalıştırmanıza izin verir.Kodunu yaz AWS Lambda ya at,ne zaman istersen kodunu tetikle ve kodun sonucunu elde et.AWS Lambda, sunucu yönetme zahmetine girmeden kod çalıştırmanıza izin verir.Yalnızca tükettiğiniz hesaplama zamanı için ödeme yaparsınız.Kodunuz çalışmadığında ücret alınmaz.FaaS (Function as a Code) ve Serverless teknolojisi olarak düşünebiliriz.
+
+
+AWS Batch
+Batch processing ihtiyaclarını otomatize edebiliyoruz.Servise görevi veriyorsunuz,o sizin yerinize makinaları ayağı kaldırıp işlemi tamamlayıp bilgisayarları kapatıyor.
+
+
+AWS Elastic Beanstalk
+Bir PaaS servisidir,kısacası aws bize uygulamamızı çalıştırmamız için bir platform sağlıyor ve bize sadece uygulama kodumuzu yazmaya konsantre olmak kalıyor.
+
+Amazon Machine Image (AMI)
+Sanal makine oluştururken hangi image şablonu kullanmamız gerektiğine karar veririz.3 çeşit AMI vardır.Private – public – paid.

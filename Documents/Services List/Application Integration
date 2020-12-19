@@ -1,0 +1,35 @@
+Application Integretion -
+
+
+
+SQS - Simple Queue Service
+
+AWS en eski servisidir,bir mesaj kuyruk sistemidir.SQS tamamen yönetilen bir mesaj kuyruklama servisidir.SQS de 2 tip mesaj kuyruklama seçebiliyorsunuz ; Standard ve FiFo (first in – first out)
+Not : SQS de biz sadece aws ekranında bir queue oluşturabiliriz onun dışında bu queue nın içine mesaj atmak ve bu mesajı çekmek gibi şeyler bir program aracılığıyla yapılır.
+
+
+
+SNS - Simple Notification Service
+
+Basit bildirim servisidir ve en sık kullanılan servislerden biridir.Çeşitli hedeflere duyurular göndermeyi sağlayan bir notification servisidir.SNS push tabanlı yani itme tabanlı bir duyuru servisidir.
+SNS’in 3 temel komponenti vardır ; Publisher , Topic , Subscriber
+SNS servisinin temelde yaptığı iş şu şekildedir ; Topics lere gidip alarmlar oluştururuz ve bu alarmlara subscriber ları ekleriz.Daha sonra servislerle alakalı cloudwatch da kural oluşturduğumuzda target olarak bu topicsleri ekleriz.Yani biz gelip SNS servisi içerisinden subscriberlara elle publish mesaj göndermeyiz bu sadece test için yapılır.
+SNS servisinde apple,facebook un notificatios için kullandığı Mobile push notifications özelliği mevcuttur ve gerekli bir uygulama yazıyorsanız gerekli ayarları yapıp kullanabilirsiniz.
+Text SMS message özelliğini kullanarak SNS içerisinden sms de gönderebiliyoruz.Promotinonal ve Transactional tip sms gönderebiliyoruz.
+
+
+
+SWF - Simple Workflow Service
+
+AWS nin iş akışı servisidir.SWF 3 temel komponentten oluşur ; 
+Workflow Starter , Workflow Decider , Workflow Worker
+
+
+Step Functions 
+
+
+
+
+Amazon MQ
+
+Sektörde nerdeyse standart olmus bir mesaj broker servisidir.
