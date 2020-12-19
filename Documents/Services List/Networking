@@ -1,0 +1,95 @@
+Networking-
+
+
+
+Amazon VPC ( Virtual Private Cloud)
+
+Tamamen size özel bir ağdır içerisinde birçok işlem yapabilirsiniz.Kendine alt ağlar kurabilirsin v.b ana haberleşme alt yapısı diyebiliriz.VPC kabaca bizim AWS dünyasında kendi özel ağ alt yapımızı oluşturmayı sağlayan sanal ağ katmanıdır ve bu tamamen bize özeldir.Eğer biz izin vermezsek buna erişim sağlayamıyorlar.
+VPC oluştururken 1 adet AWS nin default oluşturduğu vpc görürsünüz.
+Subnet oluştururken consolda gördüğünüz 3 adet subnette aynı şekilde AWS nin default subnetleridir.
+
+
+
+
+
+
+VPC oluştururken subnet calculatordan yararlanarak ip hesaplaması yapılabilir.
+Örneğin ; 10.10.0.0/16  ip adresinde bir VPC oluşturmak isterseniz ;
+10.10.10.0 = Ağ Adresi
+10.10.10.1 = VPC Router
+10.10.10.2 = DNS 
+10.10.10.3 = Rezerve
+10.10.10.255 = Broadcast adresi 
+
+Bu 5 ip adresi otomatikmek karşılarındaki hizmetler için alınıcaktır böylelikte ağımızda kullanabiliceğimiz 251 adet ip adresine sahip oluruz.Ilk ip adresimizi 10.10.10.4 olarak vermeye başlayabiliriz.
+
+
+
+Cloudfront  
+
+Amazonun CDN hizmetidir.CDN Hizmet noktalarına AWS dünyasında edge location denmektedir.Sen bu hizmeti devreye aldığın zaman kullanıcıların statik veriye kendilerine yakın edge location dan erişmeye başlıyorlar.Bu edge locationlarda başka bir servis bulunduramassınız bunlar region zonelardan ayrı tutulan sadece Cloudfront servisini kullanabiliceğiniz edge locationlardır.
+
+
+
+
+Route53
+
+Amazonun DNS hizmetidir.Bunun haricinde ;
+API ile programlanabilir yönetim
+Alan adı kaydı “satın alma”
+Alan adı yönetimi
+Routing Policyler ve healtcheck servisi aracığılıyla load balancing imkanı
+Public Zone ve Private Zone olmak üzere 2 tür zone oluşturabiliyoruz
+Bir zone yarattığımız zaman otomatik olarak ilk iki temel kaydımız otomatik yaratılır.Bunlar ; SOA (Start of Authority) ve NS (Name Server) dır.
+Alias dns türü sadece AWS’ye aittir ve aslında cNAME ile aynı işi yapıyor diyebiliriz ancak Alias AWS servisleri için kullanılır ve ücretsizdir.cNAME dns türü ise ücretlidir.
+Ayrıca Root53 sayesinde Load Balancing işlemleri yapabiliriz.Bunun için Weighted ,Latency, Geolocation,Failover rule gibi yöntemler kullanılabilir.
+Root53 sadece basit bir dns hizmeti değildir bize birçok onlarca alt şeyler sunabiliyor ve birçok farklı işlem yapmamıza olanak sağlıyor.
+
+
+
+
+API Gateway
+
+Manage apı gateway çözümüdür.Amazon API Gateway, geliştiricilerin herhangi bir ölçekte API oluşturmasını, yayınlamasını, sürdürmesini,izlemesini  ve güvenliğini sağlamasını kolaylaştıran tamamen yönetilen bir hizmettir.AWS Lambda ile entegre kullanabiliriz.
+
+
+
+Direct connect
+
+Kendi firma lokasyonunuzdan aws veri merkezine direk dedike bir hat çekme imkanına kavuşuyoruz.Direct Connect AWS’in dünya genelinde birçok ağ bağlantı partneriyle yaptığı anlaşmalar sonucu oluşturduğu bağlantı servisidir.
+
+
+
+Migration-
+
+
+
+AWS Migration Hub
+
+
+
+
+
+
+Application Discovery
+
+Veri merkezini tarayıp uygulamalar ve alt yapı hakkında detaylı bilgiler edinip bunları taşınma planı oluşturmakta kullanabiliyorsunuz.
+
+
+
+
+AWS Database Migration Service
+
+Veritabanınızı amazonun veritabanına aktarmanızı sağlar.
+
+
+
+Server Migration Service
+
+Mevcut sunucularınızı kesintiye uğratmadan tüm içeriklerle beraber aws dünyasına taşımanıza yardımcı olur.
+
+
+
+Snowball
+
+Hikayesini hatırla aws sana kutu gönderiyor örneğin betabayt büyüklüğündeki verilerin aktarımı için ve bu aktarım kutu kapsamlı bir şifreli sistemine sahiptir.

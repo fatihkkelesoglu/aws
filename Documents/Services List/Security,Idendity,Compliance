@@ -1,0 +1,67 @@
+Security,Idendity,Compliance -
+
+
+
+
+AWS Idendity and Access Management (IAM)
+
+Merkezi AWS hesap yönetim sistemidir.Tüm hesap ayarları bu servis aracılığıyla yönetilir.AWS’nin kalbi olan bir yönetim servisidir.AWS sistemiyle alakalı kullanıcı oluşturma,ekleme,silme ve policyler,roller ve kurallar yazıp bunları kullanıcılara dahil edebiliceğimiz gruplar oluşturabiliriz. Kısacası kullanıcı yönetimi ile ilgili işlemler yapmamızı sağlar.
+
+
+Cognito
+
+Sitenize kayıt olurken isim soyisim mail gibi bilgiler istemek yerine facebook,linkedin hesabıyla direk üye ol olayını sağlıyor diyebiliriz.
+
+
+
+Secrets Manager
+
+Bir zaman sonra onlarca yönetmemiz gereken secretsler olucak secrets manager sayesinde bunları kodumuzda tutmadan kullanabiliyoruz.
+
+
+Amazon GuardDuty
+
+Bir nevi tehdit algılama hizmetidir diyebiliriz.
+
+
+
+Amazon Inspector
+
+Müfettiş diyebiliriz uygulamalırımızı tarayıp gerekli güvenlik açıklarını tespit etmiş oluyoruz.
+
+
+Amazon Macie
+
+Macie ile S3 servisine herhangi bir hassas veri atılıp atılmadığını kontrol etmenizi sağlar.Hassas veri kontrolü ve güvenliği
+
+
+
+SSO - Single Sign On
+
+Tekli oturum açma diyebiliriz kendi local sistemimizde bir kullanıcı adıyla sso olustururuz ve tum servislere bu üyelikle giris sağlarız.
+
+
+AWS Certificate Manager
+
+Sertifikları sağlayan sertifika manager servisidir.
+
+
+AWS CloudHSM
+
+AWS e yolladığımız verileri bizden baska kimse göremesin derseniz en kurumsal sekli donanımsal bir hsm modemi kullanmanız gerekicektir.
+
+
+AWS Directory Servive
+
+AWS active directory servisidir.
+
+
+
+AWS WAF
+
+Web application firewall servisidir.
+
+
+AWS Artifact 
+
+Bir nevi dosya deposudur 

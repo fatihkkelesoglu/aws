@@ -1,0 +1,35 @@
+Machine Learning -
+
+
+
+SageMaker
+
+Modelleri yaratıp yönetmeye yarar.
+
+
+Comprehend
+
+Bu servise bir metni atıyorsunuz ve servis size o metindeki önemli kısımları çekip size listeliyebiliyor.
+
+
+Deeplens
+
+Video tanıma uygulaması diyebiliriz.
+
+
+Lex
+
+Uygulamalarınızın içerisine sesle komut verme sistemi kurabilirsiniz.Mesela bana sitedeki 39 no lu kırmızı ayakkabıları getiri size listeli bir şekilde e ticaret sitenizde gösterir.
+
+Polly
+
+Buna bir metin dosyası atıp onu ses dosyası haline getirebiliyorsunuz.
+
+Rekognition
+
+Sağladığınız görüntü ve videolarda son derece hassas ses ve yüz analizi ve yüz tanıma sağlar.
+
+
+Translate
+
+AWS nin çeviri servisidir iki dil arasında çeviri servisidir.Google transleti diyebiliriz.

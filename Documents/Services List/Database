@@ -1,0 +1,65 @@
+Database-
+
+
+
+RDS - Relational Database Service – (Aurora)
+Amazonun ilişkisel veri tabanı servisidir kısacası SQL server diyebiliriz.AWS kendi sql hizmeti Aurora’nın dışında RDS üzerinde MySQL,MariaDB,PostgreSQL,Oracle,Microsoft SQL Server gibi sql tabanlı servislerin kullanılmasına da olanak sağlar.
+RDS Disk Altyapısında 2 tür seçeneğimiz vardır; General Purpose (SSD) ve Provisioned IOPS (SSD)
+Multi AZ ve Read Replica özellikleri mevcuttur.
+Eğer performans ile bir sıkıntım varsa bunu Read Replica ile çözerim ancak problemim alt yapının kesilmeden çalışması ise bunu Multi AZ kurulumları ile sağlarım.
+RDS tamamen AWS tarafından yönetilen veri tabanı servisidir.Biz makinanın ayakta kalması,sağlığı gibi şeylerle ilgilenmeyiz bunları otomatikmen AWS yönetir.Biz veritabanımız içerisindeki tablolarımızı ve çeşitli verilerimizi yönetiriz.Bu yönetim işlemi için eğer GUI (görsel arayüz) kullanmak istersenMySQL kullanıyorsak MySQL Workbench i indirip kullanabiliriz.
+RDS de bir veritabanını önceki bir snapshota döndürmek istediğinizde kesinlikle gider o snapshot üzerinden yeni bir instance db yaratır yani direk eskisinin üzerine döndüremeyiz.
+RDS veritabanlarına bir ip adresi üzerinden değil endpoint üzerinden erişilir ; 
+calisanlardb.cnswr8ufzreq.eu-west-1.rds.amazonaws.com
+
+AWS bize RDS veritabanı makinalarına direk bağlanma şansı vermiyor yani putty den bilgilerini girip RDS veritabanına bağlanma gibi bir şansımız yok.Bu yüzden örneğin log ve events kontrolü yapmak istersek AWS Console kısmından RDS bölümünün arayüzünden bu bilgilere ulaşıp kontrol edebiliyoruz.
+
+RDS nin Multi AZ ve Read Replica şeklinde 2 önemli özelliği vardır.
+
+Multi AZ ; Bir veritabanının iki tane farklı kopyasının biri aktif ve biri pasif olmak üzere ayarlayıp,aktif olanda bir sıkıntı çıktığında birebir aynı olan pasif kopya devreye giriyor ve biz kesinti yaşamadan çalışmamıza devam ediyoruz.Multi AZ yaptığımızda veritabanı makinamızın birebir kopyası başka bir availability zone üzerinde kopyalanır ve pasif şekilde tutulur.Aktif olan veritabanı makinamızın başına birşey gelebileceği gibi çalıştığımız availability zoneda bir sıkıntı olabilir.Bu yüzden Multi AZ özelliğini kullanarak veritabanımızın kopyasını başka bir availability zone da oluşturur ve pasif olarak tutarız.Kısacası Multi AZ tamamen veritabanını korumak amaçlıdır.
+
+Read Replica ; Eğer RDS de veritabanımız için bir Read Replica kopyası oluşturur ve bu oluşturduğumuz Read Replica üzerinden veritabanımıza bağlantı sağlarsak sadece ve sadece READ ONLY işlemi yapabiliriz.Yani Read Replica’ya hiçbir şekilde kimse veri giremez sadece veri okuyabilir ama ana kopyamızdan bağlantı sağlandığımızda herşeyi yapabiliyoruz.Ama sorgular için okuma yapmak istiyorsak Read Replica üzerinde hızlı okumalar yapabiliriz,bize sadece okuma izni verir ancak işlemlerimiz hızlı olacaktır.Kısacası veritabanı üzerimizde hızlı okuma sorguları yapmak için Read Replica kopyası oluşturabiliriz.
+
+Not : Siz bir RDS instance bir database i sildiğiniz zaman otomatik backupların hepsi silinir ancak bizim manuel olarak aldığımız snapshotlar sistemden silinmez,kalır.Bu da bize daha sonradan o snapshotten yeni bir veritabanı oluşturma imkanı verir.Otomatik backuplar silinir ancak manuel backuplar silinmez.
+
+
+
+
+
+
+DynamoDB
+Amazonun ilişkisel olmayan veri tabanı servisidir NoSQL database modelidir.
+
+DynamaDB  Global Tables özelliği sayesinde ;
+Multi region hem okuma hem yazma sağlar
+Streams özelliği sayesinde devreye alınır
+Streamlar başka olayları tetikleyebilir
+
+DynamoDB Accelerator ile in-memory caching imkanı sağlar.
+35 güne kadar otomatik yedeklemenin yanı sıra manuel yedekleme imkanı da vardır.
+Öğelere TTL  “Time to Live” değerleri atanabilir.
+Kısacası hızlı yönetilmesi gerekmeyen basit bir veri tabanı servisidir.
+
+
+
+Amazon ElastiCache
+Hızlı belleklerle oluşturulan bir ön bellek servisidir.Çok sık erişilen bir veriyi elasticache kullanıp hız konusunda istediğimiz performansı sağlayabiliriz.
+Memcached ve Redis tabanlı kullanılabilir. (Cluster Engine olarak)
+Memcached ve Redis ön bellekleme servisleridir.Bizim girdiğimiz değerlerin tamamı bunun ram inde yani memory sinde tutuluyor böylelikle bana çok hızlı şekilde bu veriyi geri döndürebiliyor.
+
+
+
+
+
+Neptune
+Aws nin graf database sistemidir.
+
+
+Redshift
+Hızlı ve ölçeklenebilir bir veri ambarıdır.AWS’nin veri ambarı servisidir.
+OLAP mantığında çalışır.Veri analizi yapmak için kullanırız.
+Petabyte seviyesinde veri analizi imkanı sağlar.
+S3 Data Lake “veri gölü” olarak kullanılabilir.
+Leader-manager node ücretsizdir.
+HDD tabanlı DS2 instance tipleri 2petabyte’a kadar veri depolama imkanı sunar.
+SSD tabanlı DC2 instance türleri ise 326TB a kadar genişletilebilirler.
